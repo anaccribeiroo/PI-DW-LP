@@ -1,0 +1,33 @@
+body{
+	background-color: #DEB887;
+	font-family: gungsuh, sans-serif;
+     }
+
+h1{
+	color: #8B4513;
+	font-weight: bold;
+	text-align:center;
+   }
+
+div{
+	font-size: 30px;
+	color: #8B4513;
+    }
+
+body{
+	background-image: url("oi.jpg");
+   }
+
+h3{
+	width: 55%;
+	border-color: #8B4513;
+	border-style: double;
+	border-width: 7px;
+	margin-top: 10%;
+	margin-left: 25%;
+    }
+
+button{
+	color: #8B4513;
+       }
+	

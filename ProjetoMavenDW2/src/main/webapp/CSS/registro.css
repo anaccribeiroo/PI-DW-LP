@@ -14,8 +14,8 @@ div{
 	color: #8B4513;
     }
 
-body{
-	background-image: url("oi.jpg");
+#image{
+	background-image: url("../Imagens/artigo.jpg");
    }
 
 h3{
@@ -30,4 +30,5 @@ h3{
 button{
 	color: #8B4513;
        }
+      
 	

@@ -5,18 +5,21 @@
  */
 package br.com.utfpr;
 
+import DAOs.DAOAutor;
+import Entidades.Autor;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author a1602900
- */
+
 @WebServlet(name = "NovoServlet", urlPatterns = {"/NovoServlet"})
 public class NovoServlet extends HttpServlet {
 
@@ -29,18 +32,47 @@ public class NovoServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
+        String nomeAutor = request.getParameter("nome_autor");
+        String dataNasc = request.getParameter("data_nasc");
+        String paisOrigem = request.getParameter("pais_origem");
+        String inf = request.getParameter("descricao");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        
+        
+        DAOAutor daoAutor = new DAOAutor();
+        Autor autor = new Autor();
+        autor.setIdAutor(daoAutor.autoIdAutor());
+        
+        autor.setNomeAutor(nomeAutor);
+        try{
+        autor.setDataNasc(sdf.parse(dataNasc));
+        }
+        catch (Exception e){
+            System.out.println("Erro na data");
+        }
+        autor.setPaisOrigem(paisOrigem);
+        autor.setDescricao(inf);
+        
+        
+        daoAutor.inserir(autor);
+        
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            List<Autor> lista = new ArrayList<>();
+        lista = daoAutor.list();
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet NovoServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet NovoServlet at " + request.getContextPath() + "<a href=\"" + request.getContextPath() + "\">Voltar</a></h1>");
+            out.println(lista);
             out.println("</body>");
             out.println("</html>");
         }
@@ -75,11 +107,6 @@ public class NovoServlet extends HttpServlet {
         processRequest(request, response);
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
     @Override
     public String getServletInfo() {
         return "Short description";

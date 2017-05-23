@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="CSS/listaFormatacao.css" type="text/css">
     </head>
     <body>
-        <h1>Lista autor</h1>
+        <h1>Lista de Autores</h1>
         
             <table>
                 <tr>

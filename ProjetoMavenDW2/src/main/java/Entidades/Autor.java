@@ -6,13 +6,10 @@
 package Entidades;
 
 import java.io.Serializable;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -34,28 +31,20 @@ public class Autor implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
+    @NotNull
     @Column(name = "id_autor")
     private Integer idAutor;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 45)
-    @Column(name = "nome_autor")
-    private String nomeAutor;
-    @Basic(optional = false)
-    @NotNull
+    @Size(max = 45)
+    @Column(name = "nome")
+    private String nome;
     @Column(name = "data_nasc")
     @Temporal(TemporalType.DATE)
     private Date dataNasc;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 45)
+    @Size(max = 45)
     @Column(name = "pais_origem")
     private String paisOrigem;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 100)
+    @Size(max = 100)
     @Column(name = "descricao")
     private String descricao;
 
@@ -66,14 +55,6 @@ public class Autor implements Serializable {
         this.idAutor = idAutor;
     }
 
-    public Autor(Integer idAutor, String nomeAutor, Date dataNasc, String paisOrigem, String descricao) {
-        this.idAutor = idAutor;
-        this.nomeAutor = nomeAutor;
-        this.dataNasc = dataNasc;
-        this.paisOrigem = paisOrigem;
-        this.descricao = descricao;
-    }
-
     public Integer getIdAutor() {
         return idAutor;
     }
@@ -82,12 +63,12 @@ public class Autor implements Serializable {
         this.idAutor = idAutor;
     }
 
-    public String getNomeAutor() {
-        return nomeAutor;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNomeAutor(String nomeAutor) {
-        this.nomeAutor = nomeAutor;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public Date getDataNasc() {
@@ -136,8 +117,7 @@ public class Autor implements Serializable {
 
     @Override
     public String toString() {
-        SimpleDateFormat date = new SimpleDateFormat("dd/MM/yyyy");
-        return idAutor +";"+ nomeAutor+";"+ date.format(dataNasc)+ ";"+paisOrigem+";"+descricao+"<br/>"; 
+        return "Entidades.Autor[ idAutor=" + idAutor + " ]";
     }
     
 }

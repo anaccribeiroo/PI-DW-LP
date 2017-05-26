@@ -6,6 +6,7 @@
 package Entidades;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -28,6 +29,8 @@ import javax.validation.constraints.Size;
 @NamedQueries({
     @NamedQuery(name = "Autor.findAll", query = "SELECT a FROM Autor a")})
 public class Autor implements Serializable {
+    
+    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -73,6 +76,10 @@ public class Autor implements Serializable {
 
     public Date getDataNasc() {
         return dataNasc;
+    }
+    
+    public String getDataNascString(){
+        return sdf.format(dataNasc);
     }
 
     public void setDataNasc(Date dataNasc) {

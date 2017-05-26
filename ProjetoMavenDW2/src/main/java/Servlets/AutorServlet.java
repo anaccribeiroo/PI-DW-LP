@@ -92,7 +92,6 @@ public class AutorServlet extends HttpServlet {
         request.setAttribute("listaAutores", list);
         RequestDispatcher rd = request.getRequestDispatcher("/listajstl.jsp");
         rd.forward(request, response);
-        
     }
 
     /**

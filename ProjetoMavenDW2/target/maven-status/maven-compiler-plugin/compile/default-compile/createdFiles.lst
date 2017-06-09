@@ -3,3 +3,4 @@ Entidades\Autor.class
 Servlets\AutorServlet.class
 DAOs\DAOAutor.class
 Entidades\Autor_.class
+Servlets\RevistaServlet.class

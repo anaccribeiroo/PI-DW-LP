@@ -90,7 +90,7 @@ public class AutorServlet extends HttpServlet {
         List<Autor> list = daoAutor.listInOrderId();
         
         request.setAttribute("listaAutores", list);
-        RequestDispatcher rd = request.getRequestDispatcher("/listajstl.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/JSPs/listaAutor.jsp");
         rd.forward(request, response);
     }
 

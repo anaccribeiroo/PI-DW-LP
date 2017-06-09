@@ -30,7 +30,7 @@ import javax.validation.constraints.Size;
     @NamedQuery(name = "Autor.findAll", query = "SELECT a FROM Autor a")})
 public class Autor implements Serializable {
     
-    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+    //SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -78,14 +78,12 @@ public class Autor implements Serializable {
         return dataNasc;
     }
     
-    public String getDataNascString(){
-        return sdf.format(dataNasc);
-    }
-
-    public void setDataNasc(Date dataNasc) {
+//    public String getDataNascString(){
+//        return sdf.format(dataNasc);
+//}   
+    public void setDataNasc(Date dataNasc){
         this.dataNasc = dataNasc;
     }
-
     public String getPaisOrigem() {
         return paisOrigem;
     }
@@ -125,6 +123,5 @@ public class Autor implements Serializable {
     @Override
     public String toString() {
         return "Entidades.Autor[ idAutor=" + idAutor + " ]";
-    }
-    
-}
+    }}
+

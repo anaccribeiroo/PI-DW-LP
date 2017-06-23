@@ -25,10 +25,10 @@
                 </tr>
                     <c:forEach items="${listaAutores}" var="autor">
                     <tr>
-                        <td>| <c:out value="${autor.nome}" /> |</td>
-                        <td>| <c:out value="${autor.dataNasc}" /> |</td>
-                        <td>| <c:out value="${autor.paisOrigem}" /> |</td>
-                        <td>| <c:out value="${autor.descricao}"/> |</td>
+                        <td> <c:out value="${autor.nome}" /> </td>
+                        <td> <c:out value="${autor.dataNasc}" /> </td>
+                        <td> <c:out value="${autor.paisOrigem}" /> </td>
+                        <td> <c:out value="${autor.descricao}"/> </td>
                     </tr>
                 </c:forEach>
             </table>

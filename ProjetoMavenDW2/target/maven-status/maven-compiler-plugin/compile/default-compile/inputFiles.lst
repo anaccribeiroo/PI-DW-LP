@@ -1,5 +1,7 @@
 D:\PI-DW-LP\ProjetoMavenDW2\src\main\java\DAOs\DAOAutor.java
+D:\PI-DW-LP\ProjetoMavenDW2\src\main\java\Servlets\ExcluirAutor.java
+D:\PI-DW-LP\ProjetoMavenDW2\src\main\java\Servlets\Login.java
 D:\PI-DW-LP\ProjetoMavenDW2\src\main\java\Servlets\AutorServlet.java
 D:\PI-DW-LP\ProjetoMavenDW2\src\main\java\DAOs\DAOGenerico.java
+D:\PI-DW-LP\ProjetoMavenDW2\src\main\java\Servlets\BuscaChave.java
 D:\PI-DW-LP\ProjetoMavenDW2\src\main\java\Entidades\Autor.java
-D:\PI-DW-LP\ProjetoMavenDW2\src\main\java\Servlets\RevistaServlet.java

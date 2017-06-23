@@ -1,6 +1,8 @@
 DAOs\DAOGenerico.class
 Entidades\Autor.class
+Servlets\Login.class
 Servlets\AutorServlet.class
+Servlets\BuscaChave.class
+Servlets\ExcluirAutor.class
 DAOs\DAOAutor.class
 Entidades\Autor_.class
-Servlets\RevistaServlet.class

@@ -9,13 +9,24 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Cadastro de Artigos</title>
-        <link rel="stylesheet" href="CSS/pgInicial.css" type="text/css">
+        <title>Autenticação</title>
+        <link rel="stylesheet" href="CSS/index.css" type="text/css">
     </head>
     <body>
-        <h1>Registre seu artigo e visualize os que já estão registrados!</h1>
-        <a href="JSPs/autor.jsp"><button>Registrar Artigo</button></a>
-        <button>Visualizar Artigos</button>
-        
+        <form action="Login" method="post" >
+            <div align="left">
+                Login:
+                <input type="text" name="login"> <br/>
+            </div>
+            <div align="left">
+                Senha:
+                <input type="password" name="senha"> <br/>
+            </div>
+            <button type="submit">Enviar</button>
+            <div>
+                Não tem cadastro como autor?
+                <a href="JSPs/autor.jsp">Cadastre-se</a>
+            </div>
+        </form>
     </body>
 </html>

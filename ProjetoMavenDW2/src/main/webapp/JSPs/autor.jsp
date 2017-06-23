@@ -8,7 +8,11 @@
 <html>
     <head>
         <title> Registro de Autor </title>
-        <%--<link rel="stylesheet" href="CSS/autor.css" type="text/css"> --%>
+        <link rel="stylesheet" href="CSS/autor.css" type="text/css">
+        <script type="text/javascript" src = "../js/plugins/lib/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src = "../js/plugins/dist/jquery.maskedinput.js"></script>
+        <script type="text/javascript" src = "../js/javascript.js"></script>
+
     </head>
 
     <body>
@@ -16,15 +20,24 @@
             <h1>CADASTRO DO AUTOR</h1>
             <%--<img src="Imagens/artigo.jpg">--%>
         </div>
-        
-        <form action="../AutorServlet" method="post" >
+
+        <form action="../AutorServlet" method="post">
+            <div alig
+                 n="left">
+                Login:
+                <input type="text" name="login"> <br/>
+            </div>
             <div align="left">
-                Nome do Autor:
-                <input ype="text" name="nome_autor"> <br/>
+                Senha:
+                <input type="password" name="senha"> <br/>
+            </div>
+            <div align="left">
+                Nome:
+                <input type="text" name="nome_autor"> <br/>
             </div>
             <div align="left">
                 Data de Nascimento:
-                <input type="text" name="data_nasc"> <br/>
+                <input type="text" name="data_nasc" id="date"> <br/>
             </div>
             <div align="left">
                 País de Origem:
@@ -36,17 +49,18 @@
             </div>
 
             <div align="left" class="button">
-                <button type="submit"> Registrar Autor </button>
+                <button type="submit">Registrar Autor</button>
             </div>
-           
+
         </form>
 
         <form action="../AutorServlet" method="get">
             <button type="submit">Visualizar Autores</button>
         </form>
-        <div align="center"><a href="revista.jsp"<button>Próximo</button></a></div>
 
 
-</body>
+
+    </body>
 
 </html>
+<%--http://rafaelcouto.com.br/validando-formularios-com-javascript/--%>

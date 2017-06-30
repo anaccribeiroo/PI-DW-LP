@@ -1,66 +1,92 @@
 <%-- 
-    Document   : autor
-    Created on : 31/03/2017, 10:49:42
+    Document   : index
+    Created on : 27/06/2017, 10:08:45
     Author     : Ana Ribeiro
 --%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-    <head>
-        <title> Registro de Autor </title>
-        <link rel="stylesheet" href="CSS/autor.css" type="text/css">
-        <script type="text/javascript" src = "../js/plugins/lib/jquery-1.8.3.min.js"></script>
-        <script type="text/javascript" src = "../js/plugins/dist/jquery.maskedinput.js"></script>
-        <script type="text/javascript" src = "../js/javascript.js"></script>
+<html lang="en">
 
+    <head>
+        <title>Cadastro de Autor</title>
+        <meta charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../CSS/bootstrap.min.css" rel="stylesheet">
+        <link href="../CSS/estilo.css" rel="stylesheet">
+        <script type="text/javascript" src = "../jsScript/plugins/lib/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src = "../jsScript/plugins/dist/jquery.maskedinput.js"></script>
+        <script type="text/javascript" src = "../jsScript/javascript.js"></script>
     </head>
 
     <body>
-        <div id="image">
-            <h1>CADASTRO DO AUTOR</h1>
-            <%--<img src="Imagens/artigo.jpg">--%>
+
+        <div class="jumbotron" id="jumbo">
+            <div class="container text-center">
+                <h1>Cadastro de Autor</h1>
+                <p>Texto</p>               
+            </div>            
         </div>
 
-        <form action="../AutorServlet" method="post">
-            <div alig
-                 n="left">
-                Login:
-                <input type="text" name="login"> <br/>
-            </div>
-            <div align="left">
-                Senha:
-                <input type="password" name="senha"> <br/>
-            </div>
-            <div align="left">
-                Nome:
-                <input type="text" name="nome_autor"> <br/>
-            </div>
-            <div align="left">
-                Data de Nascimento:
-                <input type="text" name="data_nasc" id="date"> <br/>
-            </div>
-            <div align="left">
-                País de Origem:
-                <input type="text" name="pais_origem"> <br/>
-            </div>
-            <div align="left">
-                Informações:
-                <input type="text" name="descricao"> <br/>
-            </div>
 
-            <div align="left" class="button">
-                <button type="submit">Registrar Autor</button>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <form method="post" action="../AutorServlet" class="form-horizontal"> 
+                        <div class="form-group">
+                            <%--<label class ="control-label col-sm-1" for="login">Login:</label>--%>
+                            <div class="col-sm-11">
+                                <input type="text" required="true" class="form-control" name = "login" placeholder="Login">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <%--<label class ="control-label col-sm-1" for="senha">Senha:</label>--%>
+                            <div class="col-sm-11">
+                                <input type="password" required="true" class="form-control" name = "senha" placeholder="Senha">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <%--<label class ="control-label col-sm-1" for="senha">Nome:</label>--%>
+                            <div class="col-sm-11">
+                                <input type="text" required="true" class="form-control" name = "nome_autor" placeholder="Nome do Autor">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <%--<label class ="control-label col-sm-1" for="senha">Data de Nascimento:</label>--%>
+                            <div class="col-sm-11">
+                                <input type="text" required="true" class="form-control" name = "data_nasc" placeholder="Data de Nascimento" id="date">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <%--<label class ="control-label col-sm-1" for="senha">País de Origem</label>--%>
+                            <div class="col-sm-11">
+                                <input type="text" required="true" class="form-control" name = "pais_origem" placeholder="País de Origem">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <%--<label class ="control-label col-sm-1" for="senha">Descrição</label>--%>
+                            <div class="col-sm-11">
+                                <input type="text" required="true" class="form-control" name = "descricao" placeholder="Descrição">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="container">
+                                <button type="submit" class="btn btn-default">Cadastrar</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="col-sm-3"></div>
             </div>
-
-        </form>
-
-        <form action="../AutorServlet" method="get">
-            <button type="submit">Visualizar Autores</button>
-        </form>
-
-
-
+        </div>
     </body>
-
 </html>
-<%--http://rafaelcouto.com.br/validando-formularios-com-javascript/--%>
+

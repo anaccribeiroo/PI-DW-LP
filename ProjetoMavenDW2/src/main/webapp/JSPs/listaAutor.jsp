@@ -18,10 +18,10 @@
         
             <table>
                 <tr>
-                <th>|Nome|</th>
-                <th>|Data de Nascimento|   </th>
-                <th>|País de Origem|   </th>
-                <th>|Descrição|</th>
+                <th>Nome</th>
+                <th>Data de Nascimento</th>
+                <th>País de Origem</th>
+                <th>Descrição</th>
                 </tr>
                     <c:forEach items="${listaAutores}" var="autor">
                     <tr>

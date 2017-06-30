@@ -28,41 +28,40 @@ public class Login extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
+
         String login = request.getParameter("login");
         String senha = request.getParameter("senha");
-        
+
         DAOAutor daoAutor = new DAOAutor();
         Autor autor = new Autor();
-        
+
         List<Autor> listaLogin = daoAutor.listByLogin(login);
-        
+
         RequestDispatcher rd;
 
         System.out.println(senha);
+        System.out.println(login);
         if (listaLogin.isEmpty()){
             rd = request.getRequestDispatcher("index.jsp");
             
         }else{
-            autor = listaLogin.get(0);
-            if (autor.getSenha().equals(senha)){
-                if (autor.getPermissao().equals("user")){
-                    rd = request.getRequestDispatcher("JSPs/bemvindo.jsp");
-                    
-                }else if (autor.getPermissao().equals("admin")){
-                    rd = request.getRequestDispatcher("JSPs/autorAdmin.jsp");
-                }else{
-                    rd = request.getRequestDispatcher("JSPs/erros.jsp");
-                }
-            } else{
-                rd = request.getRequestDispatcher("index.jsp");
+        autor = listaLogin.get(0);
+        if (autor.getSenha().equals(senha)) {
+            if (autor.getPermissao().equals("user")) {
+                rd = request.getRequestDispatcher("JSPs/artigo.jsp");
+
+            } else if (autor.getPermissao().equals("admin")) {
+                rd = request.getRequestDispatcher("JSPs/autorAdmin.jsp");
+            } else {
+                rd = request.getRequestDispatcher("JSPs/erros.jsp");
+            }
+        } else {
+            rd = request.getRequestDispatcher("index.jsp");
             }
         }
-        
-        
-        
+
         rd.forward(request, response);
-        
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

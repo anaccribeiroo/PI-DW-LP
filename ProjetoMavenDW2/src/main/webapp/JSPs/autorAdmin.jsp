@@ -10,17 +10,24 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Página do Administrador</title>
+        <link href="../CSS/estilo.css" rel="stylesheet">
     </head>
-    <body>
-        <h1>Digite uma chave, caso deseje excluir um autor.</h1>
+    <body id="jumbo">
+        <h1 align="center">Página do Administrador</h1>
 
-        <form action="../BuscaChave" method="post" >
-            <div>
-                Chave:
+        <form action="../BuscaChave" method="post">
+            <div class="centro negrito">
+                ID do Artigo:
                 <input type="text" name="chave"> <br/>
             </div>
-            <button type="submit">Buscar por chave</button>
-            <div>
+            <br/>
+            <div class="centro">
+                <button type="submit">Buscar por chave</button>
+            </div>
+            <br/>
+            <br/>
+            
+            <div class="centro">
                 <button type="submit" formaction="../ExcluirAutor">Excluir Autor</button>
             </div>
         </form>

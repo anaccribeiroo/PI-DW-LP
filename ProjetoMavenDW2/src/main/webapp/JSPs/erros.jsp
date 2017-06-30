@@ -12,6 +12,9 @@
         <title>Erro</title>
     </head>
     <body>
-        <h1>Erro</h1>
+        <h1 align="center">Erro nos dados</h1>
+        <div align="center">Verifique se os dados foram inseridos corretamente --> 
+            <a href="autor.jsp">Voltar</a>
+        </div>
     </body>
 </html>

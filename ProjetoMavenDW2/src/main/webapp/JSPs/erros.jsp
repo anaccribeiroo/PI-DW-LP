@@ -9,11 +9,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="/mavenproject1/CSS/estilo.css">
         <title>Erro</title>
     </head>
-    <body>
+    <body id="corpo">
         <h1 align="center">Erro nos dados</h1>
-        <div align="center">Verifique se os dados foram inseridos corretamente --> 
+        <div align="center">Verifique se os dados foram inseridos corretamente -->
             <a href="autor.jsp">Voltar</a>
         </div>
     </body>

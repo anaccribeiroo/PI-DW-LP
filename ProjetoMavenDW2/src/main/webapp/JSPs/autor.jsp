@@ -12,8 +12,8 @@
         <title>Cadastro de Autor</title>
         <meta charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="../CSS/bootstrap.min.css" rel="stylesheet">
-        <link href="../CSS/estilo.css" rel="stylesheet">
+        <link href="/mavenproject1/CSS/bootstrap.min.css" rel="stylesheet">
+        <link href="/mavenproject1/CSS/estilo.css" rel="stylesheet">
         <script type="text/javascript" src = "../jsScript/plugins/lib/jquery-1.8.3.min.js"></script>
         <script type="text/javascript" src = "../jsScript/plugins/dist/jquery.maskedinput.js"></script>
         <script type="text/javascript" src = "../jsScript/javascript.js"></script>
@@ -23,8 +23,7 @@
 
         <div class="jumbotron" id="jumbo">
             <div class="container text-center">
-                <h1>Cadastro de Autor</h1>
-                <p>Texto</p>               
+                <h1>Cadastro de Autor</h1>               
             </div>            
         </div>
 

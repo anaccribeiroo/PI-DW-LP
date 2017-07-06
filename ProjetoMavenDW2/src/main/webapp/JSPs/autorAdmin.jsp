@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Página do Administrador</title>
-        <link href="../CSS/estilo.css" rel="stylesheet">
+        <link href="/mavenproject1/CSS/estilo.css" rel="stylesheet">
     </head>
     <body id="jumbo">
         <h1 align="center">Página do Administrador</h1>

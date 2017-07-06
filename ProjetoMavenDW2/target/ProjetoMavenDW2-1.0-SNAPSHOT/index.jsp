@@ -24,7 +24,8 @@
         <div class="jumbotron" id="jumbo">
             <div class="container text-center">
                 <h1>Cadastro de Artigos</h1>
-                <p>Texto</p>               
+                <p>Bem vindo! Aqui você pode se conectar e registrar artigos
+                de todos os tipos. Caso não possua login, cadastre-se como autor e submeta seus arquivos.</p>               
             </div>            
         </div>
 

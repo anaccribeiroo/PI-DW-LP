@@ -1,5 +1,7 @@
 package DAOs;
 
+import static DAOs.DAOGenerico.em;
+import Entidades.Artigo;
 import Entidades.Autor;
 import java.util.ArrayList;
 import java.util.List;
@@ -46,6 +48,19 @@ public class DAOAutor extends DAOGenerico<Autor> {
             lf = listInOrderNome();
         }
 
+        List<String> ls = new ArrayList<>();
+        for (int i = 0; i < lf.size(); i++) {
+            ls.add(lf.get(i).getIdAutor()+ "-" + lf.get(i).getNome());
+        }
+        return ls;
+    }
+    public List<Artigo> autorHasArtigo(int id) {
+        return em.createQuery("SELECT cl FROM Autor p INNER JOIN p.artigoList cl WHERE p.idAutor = :id").
+                setParameter("id", id).getResultList();
+    }
+
+    public List<String> listStrings() {
+        List<Autor> lf = list();
         List<String> ls = new ArrayList<>();
         for (int i = 0; i < lf.size(); i++) {
             ls.add(lf.get(i).getIdAutor()+ "-" + lf.get(i).getNome());

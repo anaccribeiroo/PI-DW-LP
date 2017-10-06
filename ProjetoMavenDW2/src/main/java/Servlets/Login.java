@@ -41,22 +41,23 @@ public class Login extends HttpServlet {
 
         System.out.println(senha);
         System.out.println(login);
-        if (listaLogin.isEmpty()){
+        if (listaLogin.isEmpty()) {
             rd = request.getRequestDispatcher("index.jsp");
-            
-        }else{
-        autor = listaLogin.get(0);
-        if (autor.getSenha().equals(senha)) {
-            if (autor.getPermissao().equals("user")) {
-                rd = request.getRequestDispatcher("JSPs/artigo.jsp");
 
-            } else if (autor.getPermissao().equals("admin")) {
-                rd = request.getRequestDispatcher("JSPs/autorAdmin.jsp");
-            } else {
-                rd = request.getRequestDispatcher("JSPs/erros.jsp");
-            }
         } else {
-            rd = request.getRequestDispatcher("index.jsp");
+            autor = listaLogin.get(0);
+            System.out.println(autor.getSenha());
+            if (autor.getSenha().equals(senha)) {
+                if (autor.getPermissao().equals("user")) {
+                    rd = request.getRequestDispatcher("JSPs/artigo.jsp");
+
+                } else if (autor.getPermissao().equals("admin")) {
+                    rd = request.getRequestDispatcher("JSPs/autorAdmin.jsp");
+                } else {
+                    rd = request.getRequestDispatcher("JSPs/erros.jsp");
+                }
+            } else {
+                rd = request.getRequestDispatcher("index.jsp");
             }
         }
 

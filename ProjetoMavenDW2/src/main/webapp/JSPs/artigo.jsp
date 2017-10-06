@@ -54,22 +54,20 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            
-                            <div class="col-xs-5 selectContainer">
-                                <select class="form-control" name="genero">
-                                    <option value="">Gênero</option>
-                                    <option value="s">Científico</option>
-                                    <option value="m">de Opinião</option>
-                                </select>
+                            <div class="col-sm-11">
+                                <c:forEach items="${listaGeneros}" var="genero">
+                                    <select>
+                                        <option value="${genero.idGenero}">${genero.nomeGenero}</option>
+                                    </select>
+                                </c:forEach>
                             </div>
-                        </div>
 
 
-                        <div class="form-group">
-                            <div class="container">
-                                <button type="submit" class="btn btn-default">Cadastrar</button>
+                            <div class="form-group">
+                                <div class="container">
+                                    <button type="submit" class="btn btn-default">Cadastrar</button>
+                                </div>
                             </div>
-                        </div>
 
                     </form>
                 </div>

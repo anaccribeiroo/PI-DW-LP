@@ -24,12 +24,7 @@
             <div class="centro">
                 <button type="submit">Buscar por chave</button>
             </div>
-            <br/>
-            <br/>
             
-            <div class="centro">
-                <button type="submit" formaction="../ExcluirAutor">Excluir Autor</button>
-            </div>
         </form>
     </body>
 </html>
